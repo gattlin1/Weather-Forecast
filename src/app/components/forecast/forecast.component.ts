@@ -12,4 +12,8 @@ export class ForecastComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getWeather(city: string, state: string): void {
+    console.log(city, state);
+  }
+
 }

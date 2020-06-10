@@ -1,0 +1,22 @@
+$background-color: #252526;
+$text-color: #929293;
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: end;
+    grid-gap: 20px;
+    color: $text-color;
+    background-color: $background-color;
+
+    #social-media {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: auto auto auto;
+
+        a {
+            display: inline-block;
+        }
+    }
+}

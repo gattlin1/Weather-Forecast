@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ForecastComponent } from './components/forecast/forecast.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ForecastComponent
+    ForecastComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule
