@@ -1,0 +1,31 @@
+main {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 25vh;
+
+    h1 {
+        color: #c792ea;
+    }
+
+    #information {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 15px;
+        font-size: 30px;
+
+        ::placeholder {
+            color: #82aaff;
+        }
+
+        input, select, textarea {
+            background-color: #202331;
+            color: #82aaff;
+            border-color: #202331;
+        }
+
+        i {
+            color: #202331;
+        }
+    }
+}
