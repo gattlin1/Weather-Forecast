@@ -1,0 +1,11 @@
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(4, 120px) ;
+    grid-auto-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    justify-content: center;
+    padding: 15px;
+    min-height: 120px;
+    margin: 40px;
+}

@@ -1,2 +1,6 @@
 <app-forecast></app-forecast>
+<div id="forecast">
+    <app-weather-details *ngFor="let day of weeklyForecast"
+    [forecast]="day" ></app-weather-details>
+</div>
 <app-footer></app-footer>

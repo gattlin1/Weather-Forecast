@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import './variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $primary-background;
+    color: $text-color;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i {
+    &.fa-sun {
+        color: #ecc516;
+    }
+
+    &.fa-cloud {
+        color: #737374;
+    }
+
+    &.fa-bolt {
+        color: #dcec45;
+    }
+
+    &.fa-snowflake {
+        color: #aad4e5;
+    }
+}

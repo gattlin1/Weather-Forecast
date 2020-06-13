@@ -1,10 +1,11 @@
 <main>
-    <div>
-        <h1>Forecast</h1>
+    <div id="title">
+        <span>Forecast</span>
+        <i [ngClass]="icon"></i>
     </div>
     <div id="information">
         <input #city type="text" placeholder="City">
         <input #state type="text" placeholder="State">
         <i class="fas fa-search" (click)="getWeather(city.value, state.value)"></i>
     </div>
-</main>
+    </main>

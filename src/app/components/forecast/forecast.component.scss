@@ -1,11 +1,24 @@
+@import '../../../variables.scss';
+
 main {
     display: grid;
     justify-content: center;
     justify-items: center;
-    margin-top: 25vh;
+    margin-top: 15vh;
 
-    h1 {
-        color: #c792ea;
+    #title {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 5px;
+        margin: 10px;
+        span {
+            color: $blue;
+            font-size: 75px;
+        }
+
+        i {
+            font-size: 50px;
+        }
     }
 
     #information {
@@ -14,18 +27,33 @@ main {
         grid-gap: 15px;
         font-size: 30px;
 
-        ::placeholder {
-            color: #82aaff;
-        }
-
         input, select, textarea {
-            background-color: #202331;
-            color: #82aaff;
-            border-color: #202331;
+            background-color: $secondary-background;
+            color: $blue;
+            border: 1px solid $orange;
+            border-radius: 25px;
+            padding-left: 10px;
+            width: 300px;
+            height: 50px;
+
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: $blue;
+                opacity: 60%;
+            }
         }
 
         i {
-            color: #202331;
+            color: $secondary-background;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out 0s;
+
+            &:hover {
+                transition: all 0.3s ease-in-out 0s;
+                transform: rotateY(180deg);
+            }
         }
     }
 }

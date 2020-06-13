@@ -1,5 +1,4 @@
-$background-color: #202331;
-$text-color: #929293;
+@import '../../../variables.scss';
 
 footer {
     display: grid;
@@ -7,9 +6,10 @@ footer {
     align-items: center;
     justify-content: end;
     grid-gap: 20px;
+    padding: 5px;
     color: $text-color;
-    background-color: $background-color;
-    position: absolute;
+    background-color: $secondary-background;
+    position: fixed;
     bottom: 0;
     width: 100%;
 
@@ -21,6 +21,17 @@ footer {
 
         a {
             display: inline-block;
+            padding: 3px 0px 3px 0px;
+
+        }
+
+        i {
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 2px solid white;
+            }
         }
     }
 }
