@@ -1,6 +1,6 @@
 #forecast {
     display: grid;
-    grid-template-columns: repeat(4, 120px) ;
+    grid-template-columns: repeat(6, 120px) ;
     grid-auto-columns: auto;
     grid-template-rows: 1fr 1fr;
     grid-gap: 15px;

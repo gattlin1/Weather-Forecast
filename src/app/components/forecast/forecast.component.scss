@@ -11,13 +11,15 @@ main {
         grid-template-columns: auto auto;
         column-gap: 5px;
         margin: 10px;
+
         span {
-            color: $blue;
+            color: $purple-accent;
             font-size: 75px;
         }
 
         i {
             font-size: 50px;
+            width: 40px;
         }
     }
 
@@ -30,7 +32,7 @@ main {
         input, select, textarea {
             background-color: $secondary-background;
             color: $blue;
-            border: 1px solid $orange;
+            border: 1px solid black;
             border-radius: 25px;
             padding-left: 10px;
             width: 300px;
