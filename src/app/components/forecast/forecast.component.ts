@@ -14,9 +14,7 @@ import { Forecast } from 'src/models/forecast.model';
 export class ForecastComponent implements OnInit {
   public icon: string;
   public cycle = ['sunny', 'thunderstorm', 'snowy', 'cloudy'];
-  @Output() emitter = new EventEmitter();
-  public cityQuery: any;
-
+  public weeklyForecast: Forecast;
   constructor(private weather: WeatherLookupService, private iconClass: IconClassService) {
     this.icon = this.cycle[0];
   }
@@ -27,9 +25,10 @@ export class ForecastComponent implements OnInit {
 
   public getWeather(city: string, state: string): void {
     this.weather.lookupWeather(city, state).subscribe((data: any) =>
-      this.cityQuery = data.map((info) => new Forecast(info))
+      console.log(data),
+      this.weeklyForecast = data.map((info) => new Forecast(info))
     );
-    this.emitter.emit(this.cityQuery);
+    //console.log(this.weeklyForecast);
   }
 
   public cycleIcon(): void {

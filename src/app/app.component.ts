@@ -8,9 +8,7 @@ import { Forecast } from 'src/models/forecast.model';
 })
 export class AppComponent {
   title = 'forecast';
-  @Input() weeklyForecast: Array<Forecast>;
 
   constructor() {
-
   }
 }
