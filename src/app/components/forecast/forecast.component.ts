@@ -14,9 +14,11 @@ import { Forecast } from 'src/models/forecast.model';
 export class ForecastComponent implements OnInit {
   public icon: string;
   public cycle = ['sunny', 'thunderstorm', 'snowy', 'cloudy'];
-  public weeklyForecast: Forecast;
+  public forecast: Forecast;
+
   constructor(private weather: WeatherLookupService, private iconClass: IconClassService) {
     this.icon = this.cycle[0];
+    this.forecast = new Forecast();
   }
 
   ngOnInit(): void {
@@ -24,11 +26,9 @@ export class ForecastComponent implements OnInit {
   }
 
   public getWeather(city: string, state: string): void {
-    this.weather.lookupWeather(city, state).subscribe((data: any) =>
-      console.log(data),
-      this.weeklyForecast = data.map((info) => new Forecast(info))
-    );
-    //console.log(this.weeklyForecast);
+    this.weather.lookupWeather(city, state).subscribe((data: Forecast) => {
+      this.forecast = data;
+    });
   }
 
   public cycleIcon(): void {

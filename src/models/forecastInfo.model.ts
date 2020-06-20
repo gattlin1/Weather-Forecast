@@ -7,18 +7,13 @@ export class ForecastInfo {
 
     constructor(data?: any) {
         const defaults = {
-            description: '',
-            icon: '',
-            highTemp: 0,
-            lowTemp: 0,
-            windDirection: '',
             ...data
         };
 
-        this.description = defaults.description;
-        this.icon = defaults.icon;
-        this.highTemp = defaults.highTemp;
-        this.lowTemp = defaults.lowTemp;
-        this.windDirection = defaults.windDirection;
+        this.description = defaults.weather.description;
+        this.icon = defaults.weather.icon;
+        this.highTemp = Number(defaults.high_temp);
+        this.lowTemp = Number(defaults.low_temp);
+        this.windDirection = defaults.wind_cdir;
     }
 }

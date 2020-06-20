@@ -58,16 +58,17 @@ main {
             }
         }
     }
-    #forecast {
-        display: grid;
-        grid-template-columns: repeat(6, 120px) ;
-        grid-auto-columns: auto;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 15px;
-        justify-content: center;
-        padding: 15px;
-        min-height: 120px;
-        margin: 40px;
-    }
 
+
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    padding: 15px;
+    min-height: 120px;
+    margin: 40px;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { IconClassService } from 'src/app/services/icon-class/icon-class.service';
+import { ForecastInfo } from 'src/models/forecastInfo.model';
 
 @Component({
   selector: 'app-weather-details',
@@ -7,7 +8,7 @@ import { IconClassService } from 'src/app/services/icon-class/icon-class.service
   styleUrls: ['./weather-details.component.scss']
 })
 export class WeatherDetailsComponent implements OnInit {
-  @Input() forecast: {description: string, temp: number, feelsLike: number };
+  @Input() forecast: ForecastInfo;
   public icon: string;
 
   constructor(private iconClassService: IconClassService) {
@@ -16,7 +17,4 @@ export class WeatherDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.icon = this.iconClassService.getIconClass(this.forecast.description);
   }
-
-
-
 }

@@ -10,6 +10,10 @@ export class IconClassService {
   public getIconClass(weatherDescription: string): string {
     const description = weatherDescription.toLowerCase();
 
+    if (description.includes('rain')) {
+      return 'fas fa-cloud-rain';
+    }
+
     switch (description) {
       case 'sunny': {
         return 'fas fa-sun';
