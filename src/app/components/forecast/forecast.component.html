@@ -4,16 +4,24 @@
             <span>Forecast</span>
             <i [ngClass]="icon"></i>
         </div>
-        <div id="information">
+        <div
+            id="information"
+            (keyup.enter)="getWeather(city.value, state.value)">
             <input #city type="text" placeholder="City">
             <input #state type="text" placeholder="State">
-            <i class="fas fa-search" (click)="getWeather(city.value, state.value)"></i>
+            <i
+                class="fas fa-search"
+                (click)="getWeather(city.value, state.value)">
+            </i>
         </div>
     </div>
-    <div id="forecast">
-        <app-weather-details
-            *ngFor="let day of forecast.daily"
-            [forecast]="day">
-        </app-weather-details>
+    <div *ngIf="forecast.daily.length !== 0">
+        <div id="location">{{ location }}</div>
+        <div id="forecast">
+            <app-weather-details
+                *ngFor="let day of forecast.daily"
+                [forecast]="day">
+            </app-weather-details>
+        </div>
     </div>
 </main>

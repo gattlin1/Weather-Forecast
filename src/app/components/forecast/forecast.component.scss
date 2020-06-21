@@ -60,15 +60,21 @@ main {
         }
     }
 
+    #location {
+        display: grid;
+        justify-content: center;
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
     #forecast {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         grid-template-rows: repeat(3, 160px);
-        grid-gap: 15px;
+        grid-gap: 25px;
         justify-content: center;
-        padding: 15px;
+        margin: 15px 55px 55px 55px;
         min-height: 120px;
-        margin: 40px;
         font-size: 13px;
     }
 }

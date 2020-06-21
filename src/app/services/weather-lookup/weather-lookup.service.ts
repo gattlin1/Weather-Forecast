@@ -15,7 +15,7 @@ export class WeatherLookupService {
 
   public lookupWeather(city: string, state: string): Observable<Forecast> {
     const location = `${city},${state}`;
-    return this.http.get(`${this.url}?city=${location}&key=${this.API_KEY}`).map(
+    return this.http.get(`${this.url}?city=${location}&units=I&key=${this.API_KEY}`).map(
       (data: any) => {
         return new Forecast(data);
       });

@@ -2,16 +2,25 @@
 
 .forecast-widget {
     display: grid;
-    grid-template-rows: auto auto;
-    grid-gap: 15px;
-    padding: 15px;
+    grid-auto-rows: 1fr;
+    padding: 10px;
+    height: 180px;
     background-color: $secondary-background;
     justify-content: center;
     border-radius: 25px;
     border: 1px solid black;
     text-align: center;
 
-    i {
+    span {
+        padding: 10px;
+    }
+
+    #description {
         font-size: 60px;
+    }
+
+    i {
+        font-size: 15px;
+        max-height: 80px;
     }
 }

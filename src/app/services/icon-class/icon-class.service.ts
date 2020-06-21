@@ -15,7 +15,6 @@ export class IconClassService {
     for (const description of descriptions) {
       for (const c of classes) {
         if (description.includes(c)) {
-          console.log(ICON_CLASSES[c]);
           icons.push(ICON_CLASSES[c]);
         }
       }

@@ -1,8 +1,10 @@
 <div class="forecast-widget">
-    <i [ngClass]="icon"></i>
+    <i id="description" [ngClass]="icon"></i>
     <div>
         <div>{{forecast.description | titlecase}}</div>
-        <div>{{forecast.highTemp}}&#176; F</div>
-        <div>{{forecast.lowTemp}}&#176; F</div>
+        <div>Hi: {{forecast.highTemp}}&#176;F</div>
+        <div>Lo: {{forecast.lowTemp}}&#176;F</div>
+        <i [ngClass]="wind"><span>{{forecast.windDirection}}</span></i>
+        <div>{{forecast.date}}</div>
     </div>
 </div>
