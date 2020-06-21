@@ -1,12 +1,14 @@
 <main>
-    <div id="title">
-        <span>Forecast</span>
-        <i [ngClass]="icon"></i>
-    </div>
-    <div id="information">
-        <input #city type="text" placeholder="City">
-        <input #state type="text" placeholder="State">
-        <i class="fas fa-search" (click)="getWeather(city.value, state.value)"></i>
+    <div id="input">
+        <div id="title">
+            <span>Forecast</span>
+            <i [ngClass]="icon"></i>
+        </div>
+        <div id="information">
+            <input #city type="text" placeholder="City">
+            <input #state type="text" placeholder="State">
+            <i class="fas fa-search" (click)="getWeather(city.value, state.value)"></i>
+        </div>
     </div>
     <div id="forecast">
         <app-weather-details

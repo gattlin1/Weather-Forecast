@@ -1,10 +1,11 @@
 @import '../../../variables.scss';
 
 main {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    margin-top: 15vh;
+    #input {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
 
     #title {
         display: grid;
@@ -59,16 +60,15 @@ main {
         }
     }
 
-
-}
-
-#forecast {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    grid-template-rows: repeat(2, 100px);
-    grid-gap: 15px;
-    justify-content: center;
-    padding: 15px;
-    min-height: 120px;
-    margin: 40px;
+    #forecast {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-rows: repeat(3, 160px);
+        grid-gap: 15px;
+        justify-content: center;
+        padding: 15px;
+        min-height: 120px;
+        margin: 40px;
+        font-size: 13px;
+    }
 }

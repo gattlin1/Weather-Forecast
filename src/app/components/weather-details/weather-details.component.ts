@@ -9,12 +9,26 @@ import { ForecastInfo } from 'src/models/forecastInfo.model';
 })
 export class WeatherDetailsComponent implements OnInit {
   @Input() forecast: ForecastInfo;
+  public cycle: Array<string>;
   public icon: string;
 
   constructor(private iconClassService: IconClassService) {
+    this.icon = '';
   }
 
   ngOnInit(): void {
-    this.icon = this.iconClassService.getIconClass(this.forecast.description);
+    console.log(this.forecast.description);
+    this.cycle = this.iconClassService.getIconClasses(this.forecast.description);
+    this.cycleIcon(this.cycle);
+  }
+
+  public cycleIcon(cycle: Array<string>): void {
+    console.log(this.cycle);
+    let i = 0;
+    setInterval(() => {
+      this.icon = cycle[i];
+      i = ++i % cycle.length;
+
+    }, 1000);
   }
 }
